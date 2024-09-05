@@ -1,0 +1,47 @@
+# Resturent Managment System
+
+from tkinter import *
+
+def Menu():
+    root=Tk()
+    root.config(bg="lightgreen")
+    root.title("Main Menu")
+    root.geometry("300x300")
+
+    burgs=Label(root,text="Burger")
+    burgs.grid(column=0,row=0)
+    pizzs=Label(root,text="Pizza")
+    pizzs.grid(column=0,row=1)
+    smooths=Label(root,text="Smoothie")
+    smooths.grid(column=0,row=2)
+
+    box1 = Entry()
+    box1.grid(column=1,row=0)
+    box2 = Entry()
+    box2.grid(column=1,row=1)
+    box3 = Entry()
+    box3.grid(column=1,row=2)
+
+
+
+    root.mainloop()
+
+def Home():
+    window = Tk()
+    window.config(bg="lightblue")
+    window.title("Nuzhat's Resturent")
+    window.geometry("300x300")
+
+    Welcome=Label(text="Welcome to Darkholmes!",font=("Times",15,"bold"),bg="lightblue")
+    Welcome.pack()
+    
+    def FoodOrder():
+        window.destroy
+        Menu()
+
+    Order=Button(window,text="Choose your food.",padx=15,pady=8,bg="lightgreen",fg="green",font=("Times",13,"bold"),command=FoodOrder)
+    Order.pack()
+
+    window.mainloop()
+
+Home()
